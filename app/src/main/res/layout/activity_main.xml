@@ -5,23 +5,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Button
+        android:textSize="18dp"
         android:id="@id/topButton"
         android:layout_width="fill_parent"
-        android:layout_height="55.0dip"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_height="75dp"
         android:background="@drawable/topbutton"
         android:onClick="doClick"
         android:paddingRight="100.0dip"
         android:text="新的事件"
-        android:textColor="#ffffffff" />
-    <Button
-        android:text="(0)"
         android:textColor="#ffffffff"
-        android:id="@id/number"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:textSize="18dp"
+        android:text="退出"
+        android:textColor="#ffffffff"
+        android:id="@+id/exit"
         android:background="@drawable/number"
         android:layout_width="55.0dip"
-        android:layout_height="55.0dip"
+        android:layout_height="75dp"
         android:layout_marginRight="17.0dip"
         android:layout_alignRight="@id/topButton"
         android:layout_alignParentRight="true" />
@@ -55,17 +57,18 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/listion"
                 android:text="语音录" />
+
             <RadioButton
-                android:layout_marginTop="30sp"
-                android:layout_marginLeft="15dp"
-                android:textColor="@drawable/text_selector"
-                android:drawableTop="@drawable/photo_item"
-                android:button="@null"
-                android:layout_below="@+id/topButton"
+                android:id="@+id/img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/img"
-                android:text="图片录" />
+                android:layout_below="@+id/topButton"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30sp"
+                android:button="@null"
+                android:drawableTop="@drawable/photo_item"
+                android:text="图片录"
+                android:textColor="@drawable/text_selector" />
 
         </RadioGroup>
 
