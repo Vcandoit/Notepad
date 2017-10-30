@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/voebg">
-       <Button
+      <!-- <Button
             android:onClick="play"
             android:layout_marginTop="60dp"
             android:layout_gravity="center"
@@ -12,14 +12,17 @@
             android:button="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/play_btn"/>
-        <!--<Button
+            android:id="@+id/play_btn"/>-->
+        <Button
+            android:layout_marginTop="60dp"
+            android:background="@drawable/vvice"
+            android:button="@null"
+            android:layout_gravity="center"
             android:id="@+id/play_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:onClick="play"
-            android:text="播放" />-->
+            android:onClick="play"/>
     <RelativeLayout
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"

@@ -81,7 +81,7 @@ public class InnerAdapter extends BaseAdapter {
                         //Log.d("onClick: ======", String.valueOf(str2));
                         db.delete("Book","things = ?", new String[]{String.valueOf(str2)});
                         Toast.makeText(mContext,"delete successed",Toast.LENGTH_SHORT).show();
-                        
+
                         Intent intent = new Intent(mContext,MainActivity.class);
                         mContext.startActivity(intent);
                     }
