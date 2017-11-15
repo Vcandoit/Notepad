@@ -1,12 +1,10 @@
-package com.example.memodemo;
+package com.example.memodemo.ui;
 
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -14,10 +12,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.example.memodemo.PublicWay;
+import com.example.memodemo.R;
+import com.example.memodemo.data.MyDatabaseHelper;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import static android.R.id.list;
 
 public class WriteActivity extends Activity {
 
@@ -34,6 +34,8 @@ public class WriteActivity extends Activity {
 		editText1 =(EditText)findViewById(R.id.writedown);
 		//new一个新对象，要不然下面会出现空指针
 		dbHelper = new MyDatabaseHelper(this,"BookStore.db",null,1);
+
+		init();
 
 
 		Button saveData = (Button) findViewById(R.id.savedata);
@@ -60,6 +62,22 @@ public class WriteActivity extends Activity {
 
 
 	}
+
+	private void init() {
+		Intent intent2 = getIntent();
+		Bundle bundle2 = intent2.getExtras();
+		int judge = bundle2.getInt("judge");
+		if(judge == 1){
+			//Toast.makeText(WriteActivity.this,"没有内容",Toast.LENGTH_SHORT).show();
+
+		}else{
+			Intent intent1=getIntent();
+			Bundle bundle=intent1.getExtras();
+			String rewrite=bundle.getString("str");
+			editText1.setText(rewrite);
+		}
+	}
+
 	public void reClick(View view){
 		//首页传过来一个值判断是添加还是修改
 		//添加提示没有内容

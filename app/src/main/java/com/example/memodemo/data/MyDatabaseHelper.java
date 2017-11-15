@@ -1,4 +1,4 @@
-package com.example.memodemo;
+package com.example.memodemo.data;
 
 
 import android.content.Context;

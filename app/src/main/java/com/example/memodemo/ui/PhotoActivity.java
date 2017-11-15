@@ -1,4 +1,4 @@
-package com.example.memodemo;
+package com.example.memodemo.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.memodemo.R;
 
 public class PhotoActivity extends Activity {
 

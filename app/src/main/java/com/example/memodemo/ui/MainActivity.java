@@ -1,19 +1,21 @@
-package com.example.memodemo;
+package com.example.memodemo.ui;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Message;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.example.memodemo.PublicWay;
+import com.example.memodemo.R;
+import com.example.memodemo.VoiceActivity;
+import com.example.memodemo.adapter.InnerAdapter;
+import com.example.memodemo.data.MyDatabaseHelper;
 
 import java.util.ArrayList;
 

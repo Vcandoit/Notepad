@@ -1,4 +1,4 @@
-package com.example.memodemo;
+package com.example.memodemo.adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,11 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.memodemo.ui.MainActivity;
+import com.example.memodemo.data.MyDatabaseHelper;
+import com.example.memodemo.R;
+import com.example.memodemo.ui.WriteActivity;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.R.id.content;
-import static android.R.id.list;
 
 public class InnerAdapter extends BaseAdapter {
 
@@ -61,6 +63,33 @@ public class InnerAdapter extends BaseAdapter {
         }
         viewHolder.mTextView.setText(mList.get(i));
         final View finalView = view;
+
+        viewHolder.mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext,"Overwrite",Toast.LENGTH_SHORT).show();
+                TextView textView = (TextView) finalView.findViewById(R.id.writedown);
+                String overwrite = (String) textView.getText();
+                String[] strow = overwrite.split("\n");
+                String strover = strow[1];
+
+                dbHelper = new MyDatabaseHelper(mContext, "BookStore.db", null, 1);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                TextView textView1 = (TextView) finalView.findViewById(R.id.writedown);
+                String str = (String) textView1.getText();
+                //java截取字符串  截取\n前后字符串，前面为str1[0],后面为str1[2];
+                String[] str1 = str.split("\n");
+                String str2 = str1[1];
+                //Log.d("onClick: ======", String.valueOf(str2));
+                db.delete("Book","things = ?", new String[]{String.valueOf(str2)});
+
+                Intent intent = new Intent(mContext,WriteActivity.class);
+                intent.putExtra("stroverwrite", strover);
+                mContext.startActivity(intent);
+
+            }
+        });
+
         viewHolder.mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,6 +133,17 @@ public class InnerAdapter extends BaseAdapter {
                 String rewrite = (String) textView.getText();
                 String[] str3 = rewrite.split("\n");
                 String str4 = str3[1];
+
+                dbHelper = new MyDatabaseHelper(mContext, "BookStore.db", null, 1);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                TextView textView3 = (TextView) finalView.findViewById(R.id.writedown);
+                String str = (String) textView3.getText();
+                //java截取字符串  截取\n前后字符串，前面为str1[0],后面为str1[2];
+                String[] str1 = str.split("\n");
+                String str2 = str1[1];
+                //Log.d("onClick: ======", String.valueOf(str2));
+                db.delete("Book","things = ?", new String[]{String.valueOf(str2)});
+
                 Intent intent = new Intent(mContext,WriteActivity.class);
                 intent.putExtra("str", str4);
                 mContext.startActivity(intent);
