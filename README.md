@@ -1,7 +1,7 @@
 小组名称:TOP
 程序运行方法:手机app点击即可运行
 程序运行示例及运行结果:
-![write input]（Notepad/app/src/main/res/instruction/one.jpg） 
+![write input]（https://github.com/Vcandoit/Notepad/app/src/main/res/instruction/one.jpg） 
 ![show]（https://github.com/Vcandoit/Notepad/tree/master/app/src/main/res/instruction/oneo.jpg）
 ![voice input]（https://github.com/Vcandoit/Notepad/tree/master/app/src/main/res/instruction/oneon.jpg）
 ![photo input]（https://github.com/Vcandoit/Notepad/tree/master/app/src/main/res/instruction/oneone.jpg）
