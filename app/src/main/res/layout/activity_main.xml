@@ -69,7 +69,17 @@
                 android:drawableTop="@drawable/photo_item"
                 android:text="图片录"
                 android:textColor="@drawable/text_selector" />
-
+            <RadioButton
+                android:id="@+id/donot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30sp"
+                android:button="@null"
+                android:drawableTop="@drawable/donot_item"
+                android:text="我不会"
+                android:textColor="@drawable/text_selector" />
         </RadioGroup>
 
         <ListView

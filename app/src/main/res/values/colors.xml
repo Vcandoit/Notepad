@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="clr_normal">#FFFFFF</color>
     <color name="clr_pressed">#99E5FE</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="green">#008000</color>
 </resources>

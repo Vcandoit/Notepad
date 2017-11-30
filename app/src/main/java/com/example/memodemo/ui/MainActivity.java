@@ -16,6 +16,7 @@ import com.example.memodemo.R;
 import com.example.memodemo.VoiceActivity;
 import com.example.memodemo.adapter.InnerAdapter;
 import com.example.memodemo.data.MyDatabaseHelper;
+import com.example.memodemo.youdu.Youdu;
 
 import java.util.ArrayList;
 
@@ -105,6 +106,16 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
+		Button donot = (Button)findViewById(R.id.donot);
+		donot.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(MainActivity.this, Youdu.class);
+				startActivity(intent);
+
+			}
+		});
 	}
 
 	//不让手机返回键返回
